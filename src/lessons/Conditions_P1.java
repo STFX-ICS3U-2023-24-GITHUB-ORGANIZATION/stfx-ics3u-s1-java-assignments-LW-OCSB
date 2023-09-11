@@ -6,10 +6,10 @@ public class Conditions_P1 {
 
 		int mark = 100;
 		
-		if (mark >= 50)  {
+if (mark >= 50)  {
 			
-			System.out.println("You passed!");
-		}
+System.out.println("You passed!");
+}
 		
 		if (mark == 100) {
 			System.out.println("You got perfect!");
