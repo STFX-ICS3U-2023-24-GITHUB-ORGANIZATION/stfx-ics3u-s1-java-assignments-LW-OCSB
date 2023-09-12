@@ -47,6 +47,8 @@ public class IfElseIf {
 		
 		
 		System.out.println("End of program.");
+		
+		sc.close();
 	}
 
 }
