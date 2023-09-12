@@ -1,6 +1,6 @@
 package lessons;
 
-public class IfElse_P3 {
+public class IfElse {
 
 	public static void main(String[] args) {
 

@@ -1,6 +1,6 @@
 package lessons;
 
-public class Variables_P3 {
+public class Variables {
 
 	public static void main(String[] args) {
 
