@@ -1,6 +1,6 @@
 package lessons;
 
-public class ProgrammingStyle_P3 {
+public class ProgrammingStyle {
 
 	public static void main(String[] args) {
 		

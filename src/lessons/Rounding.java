@@ -1,23 +1,22 @@
 package lessons;
 
-public class Rounding_P3 {
+public class Rounding {
 
 	public static void main(String[] args) {
-		
-		// int rounding
+
 		double price = 13.579;
 		
-		// move decimal 2 places to right
+		// move decimal to the right of the position you want to round to
 		price = price * 100;
 		
-		// round to nearest int
+		// round 
 		price = Math.round(price);
 		
-		//  move decimal 2 places left
+		// move decimal back to original position
 		price = price / 100;
-		
+
 		System.out.println("$" + price);
-		
+
 	}
 
 }

@@ -1,8 +1,8 @@
 package lessons;
+
 import java.util.Scanner;
 
-
-public class TryCatch_P1 {
+public class TryCatch {
 
 	public static void main(String[] args) {
 		
@@ -12,19 +12,21 @@ public class TryCatch_P1 {
 		
 		// program
 		System.out.println("Enter an integer: ");
-
+		
 		try  {
+			
 			myInteger = sc.nextInt();
 		}
 		
-		catch (Exception e)  {
+		catch(Exception e) {
 			
-			
-			System.out.println("Incorrect entry!");
+			System.out.println("You made an incorrect entry, try again.");	
 		}
 		
-		// output
-		System.out.println("You entered: " + myInteger);
+		
+		
+		System.out.println("You just entered the number: " + myInteger);
+		
 		
 
 	}
