@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -15,6 +17,8 @@ public class AddCalculator {
 	private JTextField textField1;
 	private JTextField textField2;
 	private JTextField textField3;
+	private JButton button2;
+	private JButton button3;
 
 	/**
 	 * Launch the application.
@@ -67,8 +71,25 @@ public class AddCalculator {
 				int myInteger2 = 0;
 				int answer = 0;
 				
-				myInteger1 = Integer.parseInt(textField1.getText());
-				myInteger2 = Integer.parseInt(textField2.getText());
+				
+				try {
+					myInteger1 = Integer.parseInt(textField1.getText());
+				}
+				
+				catch(Exception e1)  {
+					
+					JOptionPane.showMessageDialog(null, "Invalid entry");
+				}
+				
+				try {
+					myInteger2 = Integer.parseInt(textField2.getText());
+				}
+				
+				catch(Exception e2)  {
+					
+					JOptionPane.showMessageDialog(null, "Invalid entry");
+				}
+				
 				
 				answer = myInteger1 + myInteger2;
 				
@@ -95,5 +116,30 @@ public class AddCalculator {
 		textField3.setBounds(222, 239, 86, 20);
 		frame.getContentPane().add(textField3);
 		textField3.setColumns(10);
+		
+		button2 = new JButton("Clear");
+		button2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				// clear button code goes here
+				textField1.setText("");
+				textField2.setText("");
+				textField3.setText("");
+			}
+		});
+		button2.setBounds(34, 166, 89, 23);
+		frame.getContentPane().add(button2);
+		
+		button3 = new JButton("Exit");
+		button3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				// exit button code goes here
+				System.exit(0);
+				
+			}
+		});
+		button3.setBounds(44, 210, 89, 23);
+		frame.getContentPane().add(button3);
 	}
 }
