@@ -11,7 +11,7 @@ public class RandomNumber {
 		System.out.println((int)((Math.random() * (n+1))));
 
 		
-		// generate random number between 0-k
+		// generate random number between 1-k
 		// use a variable "k"
 		int k = 3;
 		System.out.println( (int)((Math.random() * k) + 1));
