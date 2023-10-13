@@ -1,6 +1,7 @@
 package lessons;
 import java.util.Scanner;
 
+
 public class NestedIfStatements {
 
 	public static void main(String[] args) {
@@ -9,50 +10,46 @@ public class NestedIfStatements {
 		Scanner sc = new Scanner(System.in);
 		String dietaryPreference = "";
 		String meatChoice = "";
-		// Output
-		System.out.println("Food Menu");
-		System.out.println("Do you eat meat (M) or vegetables (V)?");
 		
-		// User input for dietary preference
-		// Assume user enters either "M", "m", "V" or "v"
+		// output
+		System.out.println("Food Menu");
+		System.out.println("Do you eat Meat (M) or Vegetables (V): ");
+		
+		// input
 		dietaryPreference = sc.next();
 		
-
-		// determine which dietary preference
-		if (dietaryPreference.equals("M")  ||  dietaryPreference.equals("m") )  {
+		if (dietaryPreference.equals("M") || dietaryPreference.equals("m"))  {
 			
-			System.out.println("Would you like Chicken (C) or Fish (F)?");
+			System.out.println("Choices are Chicken (C) or Fish (F).");
 			
 			meatChoice = sc.next();
 			
-			// nested if statement
-			if ( meatChoice.equals("C") || meatChoice.equals("c") )  {
-
-				System.out.println("Your meal will be KFC!");
+			// THIS IS A NESTED IF STATEMENT
+			if (meatChoice.equals("C") || meatChoice.equals("c"))  {
+				
+				System.out.println("KFC is your meal.");
 			}
 			
-			else if ( meatChoice.equals("F") || meatChoice.equals("f") )  {
-
-				System.out.println("Your meal will be Fillet O Poisson!");
+			else if (meatChoice.equals("F") || meatChoice.equals("f"))  {
+			
+				System.out.println("Filet O Fish is your meal.");
 			}
 			
 			else  {
-				System.out.println("Invalid meat choice.");
+				
+				System.out.println("Invalid input.");
 			}
-			
 		}
 		
-		else if (dietaryPreference.equals("V")  || dietaryPreference.equals("v") ) {
+		else if (dietaryPreference.equals("V") || dietaryPreference.equals("v")) {
 			
 			System.out.println("You are a vegetarian.");
 		}
 		
 		else  {
 			
-			System.out.println("Invalid selection.");
+			System.out.println("Invalid choice.");
 		}
-		
-		
 		
 	}
 
