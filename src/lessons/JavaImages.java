@@ -1,6 +1,6 @@
 package lessons;
 
-// IMPORT FOR PICTURES
+// IMPORT FOR IMAGES:
 import javax.swing.ImageIcon;
 
 import java.awt.EventQueue;
@@ -11,15 +11,14 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class JavaPictures {
+public class JavaImages {
 
 	// variables
+	ImageIcon dog1 = new ImageIcon(getClass().getResource("/resources/pic1.jpg"));
+	ImageIcon dog2 = new ImageIcon(getClass().getResource("/resources/pic2.jpg"));
+	
 	private JFrame frame;
-	ImageIcon myPicture1 = new ImageIcon(getClass().getResource("/resources/pic1.jpg"));
-	ImageIcon myPicture2 = new ImageIcon(getClass().getResource("/resources/pic2.jpg"));
-	
-	
-	
+
 	/**
 	 * Launch the application.
 	 */
@@ -27,7 +26,7 @@ public class JavaPictures {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					JavaPictures window = new JavaPictures();
+					JavaImages window = new JavaImages();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -39,7 +38,7 @@ public class JavaPictures {
 	/**
 	 * Create the application.
 	 */
-	public JavaPictures() {
+	public JavaImages() {
 		initialize();
 	}
 
@@ -47,28 +46,30 @@ public class JavaPictures {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		
+		// frame code
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(96, 24, 228, 115);
-		frame.getContentPane().add(lblNewLabel);
-		// load image on label when application launches
-		lblNewLabel.setIcon(myPicture1);
+		// label code
+		JLabel label1 = new JLabel("New label");
+		label1.setBounds(113, 11, 188, 176);
+		frame.getContentPane().add(label1);
+		// display picture upon launch
+		label1.setIcon(dog1);
 		
-		
-		JButton btnNewButton = new JButton("Change Picture");
-		btnNewButton.addActionListener(new ActionListener() {
+		// button code
+		JButton button1 = new JButton("Change Picture");
+		button1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				// change image on label when button is clicked
-				lblNewLabel.setIcon(myPicture2);
+				// change picture in JLabel when clicked
+				label1.setIcon(dog2);
 			}
 		});
-		btnNewButton.setBounds(130, 183, 156, 23);
-		frame.getContentPane().add(btnNewButton);
+		button1.setBounds(129, 214, 157, 23);
+		frame.getContentPane().add(button1);
 	}
-
 }
