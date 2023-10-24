@@ -25,10 +25,12 @@ public class DoWhile {
 			
 			case 1:
 				System.out.println("Hello\n");
+				break;
 			
 			case 2:
 				System.out.println("Goodbye\n");
-			
+				break;
+				
 			default:
 				System.out.println("Exiting program.");
 				
