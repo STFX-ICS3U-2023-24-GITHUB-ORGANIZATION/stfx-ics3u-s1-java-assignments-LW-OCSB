@@ -5,6 +5,9 @@ public class ForLoops {
 
 	public static void main(String[] args) {
 		
+		// Used when you want to repeat code
+		// for a known number of times.
+		
 		// variables
 		Scanner sc = new Scanner(System.in);
 		int userInput = 0;
