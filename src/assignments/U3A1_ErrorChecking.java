@@ -1,4 +1,5 @@
 package assignments;
+
 import java.util.Scanner;
 
 public class U3A1_ErrorChecking {
@@ -9,22 +10,21 @@ public class U3A1_ErrorChecking {
 		Scanner sc = new Scanner(System.in);
 		String userInput = "";
 		boolean stageChecked = false;
-		
-		// Stage 1 - enter a string greater than 6 characters long
+
+		// Stage 1
 		while (stageChecked == false)  {
 			
-			System.out.println("Enter a String that's greater than 6 characters.");
+			System.out.println("Enter String greater than 6 chars: ");
 			userInput = sc.next();
 			
-			stageChecked = stageOne(userInput);
+			stageChecked = stageOne(userInput);	
 		}
 		
-		// Stage 2 -
-		System.out.println("Onto stage 2 ...");
+		System.out.println("Going on to stage 2 ...");
 		
 	}
 
-	// DESCRIPTION - Determines if String is greater than 6 characters.
+	// DESCRIPTION - Checks if string is greater than 6 chars.
 	// PARAMETERS - String s
 	// RETURN TYPE - boolean
 	public static boolean stageOne(String s)  {
@@ -33,11 +33,8 @@ public class U3A1_ErrorChecking {
 			return true;
 		}
 		
-		else
-			return false;
+		return false;
 	}
-	
-	
 	
 	
 	
