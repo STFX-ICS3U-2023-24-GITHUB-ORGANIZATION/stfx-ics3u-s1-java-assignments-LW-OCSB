@@ -20,7 +20,10 @@ public class U3A1_ErrorChecking {
 			stageChecked = stageOne(userInput);	
 		}
 		
-		System.out.println("Going on to stage 2 ...");
+		stageChecked = false;
+		
+		// Stage 2
+		
 		
 	}
 
@@ -35,7 +38,5 @@ public class U3A1_ErrorChecking {
 		
 		return false;
 	}
-	
-	
 	
 }
