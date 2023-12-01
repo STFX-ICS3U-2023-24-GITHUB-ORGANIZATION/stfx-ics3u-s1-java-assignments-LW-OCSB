@@ -9,7 +9,8 @@ public class FormatDoubles {
 		DecimalFormat df = new DecimalFormat("0.00");
 		double num = 12.1;
 		num = Double.parseDouble(df.format(num));
-		System.out.println(num); 
+		System.out.println(num);
+
 	}
 
 }
